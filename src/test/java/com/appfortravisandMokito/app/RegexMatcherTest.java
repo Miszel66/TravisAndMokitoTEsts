@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.*;
 /**
  * Created by user on 04.03.2017.
  */
-public class RegexMatcherTests {
+public class RegexMatcherTest {
 
     private IRegexMatcher matcher;
 

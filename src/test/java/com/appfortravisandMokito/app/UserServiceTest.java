@@ -9,7 +9,7 @@ import static org.mockito.Mockito.when;
 /**
  * Created by user on 05.03.2017.
  */
-public class UserServiceTests {
+public class UserServiceTest {
 
     private final static UserDAO dao = mock(UserDAO.class);
     private final static SecurityService service = mock(SecurityService.class);

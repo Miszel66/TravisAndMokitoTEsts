@@ -15,7 +15,7 @@ import static org.assertj.core.api.Assertions.*;
  * Created by user on 05.03.2017.
  */
 @RunWith(JUnitParamsRunner.class)
-public class PasswordValidatorTests {
+public class PasswordValidatorTest {
     private IPasswordValidator validator;
     private static final String FOUR_DIGITS = "\\d{4}";
 
