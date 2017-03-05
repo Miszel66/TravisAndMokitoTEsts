@@ -3,6 +3,8 @@ package com.appfortravisandMokito.app;
 import org.junit.Before;
 import org.junit.Test;
 
+import javax.management.InvalidAttributeValueException;
+
 import static org.assertj.core.api.Assertions.*;
 
 /**
@@ -22,6 +24,16 @@ public class RegexMatcherTests {
     public void checkIfMathcerReturnsTrue()
     {
         matcher.setRegexPattern("\\d*");
-        assertThat(matcher.checkIExpresionMatchesThePattern("1234")).isTrue();
+        try {
+            assertThat(matcher.checkIfExpressionMatchesThePattern("1234")).isTrue();
+        } catch (InvalidAttributeValueException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Test(expected = InvalidAttributeValueException.class)
+    public void patterValueMustBeSetBeforecheckingMatch() throws InvalidAttributeValueException {
+            assertThat(matcher.checkIfExpressionMatchesThePattern("123")).isTrue();
+
     }
 }

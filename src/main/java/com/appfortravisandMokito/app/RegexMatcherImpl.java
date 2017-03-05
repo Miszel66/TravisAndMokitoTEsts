@@ -1,7 +1,7 @@
 package com.appfortravisandMokito.app;
 
+import javax.management.InvalidAttributeValueException;
 
-import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 
 /**
  * Created by user on 04.03.2017.
@@ -14,7 +14,14 @@ public class RegexMatcherImpl implements IRegexMatcher {
         this.pattern = pattern;
     }
 
-    public boolean checkIExpresionMatchesThePattern(String expression) {
+    public boolean checkIfExpressionMatchesThePattern(String expression) throws InvalidAttributeValueException {
+        checkIfPatterIsProvided();
+
         return expression.matches(pattern);
+    }
+    private void checkIfPatterIsProvided()throws InvalidAttributeValueException
+    {
+        if(pattern == null)
+            throw new InvalidAttributeValueException("pattern was not provided");
     }
 }
