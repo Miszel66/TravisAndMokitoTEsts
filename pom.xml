@@ -8,16 +8,27 @@
   <name>my-app</name>
   <url>http://maven.apache.org</url>
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.1</version>
-      <scope>test</scope>
-    </dependency>
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.12</version>
+      </dependency>
       <dependency>
           <groupId>org.mockito</groupId>
           <artifactId>mockito-all</artifactId>
           <version>1.10.19</version>
       </dependency>
+      <dependency>
+          <groupId>org.assertj</groupId>
+          <artifactId>assertj-core</artifactId>
+          <version>3.6.2</version>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/pl.pragmatists/JUnitParams -->
+      <dependency>
+          <groupId>pl.pragmatists</groupId>
+          <artifactId>JUnitParams</artifactId>
+          <version>1.0.6</version>
+      </dependency>
+
   </dependencies>
 </project>
